@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='style.css')}}">
+
+</head>
+<body>
+  <h1>Matrix-Matrix Multiplication - Linear Array</h1>
+  <div class="buttons">
+    <div><a href="{{ url_for('next_step') }}"><button>Next step</button></a></div>
+    <div><a href="{{ url_for('clear') }}"><button>Restart</button></a></div>
+  </div>
+  <div class="content">
+    <div class="grid-container">
+    {% for i in range(0, matrix1|length) %}
+      {% for j in range(0, old_matrix2[0]|length) %}
+        <table>
+      <tr>
+        <td></td>
+        <td class="right"></td>
+        <td>{{cells[i][j]['m1_out']}}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>{{cells[i][j]['m2_out']}}</td>
+        <td rowspan="2" colspan="2" class="cell">P{{i+1}},{{j+1}} <br> {{cells[i][j]['c']}}
+        </td>
+        <td>{{cells[i][j]['m1_in']}}</td>
+      </tr>
+      <tr>
+        <td class="top"></td>
+        <td class="top"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="right"></td>
+        <td>{{cells[i][j]['m2_in']}}</td>
+        <td></td>
+      </tr>
+    </table>
+      {% endfor %}
+    {% endfor %}
+
+    </div>
+    <div class="matrix1">
+      {% for row in matrix1 %}
+      <div class="m1_row">
+        <p>
+          &#8592;
+          {% for el in row %}
+            {{el}}
+          {% endfor %}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="matrix2">
+    <p>&#8593; &#8593; &#8593;</p>
+    {% for row in matrix2 %}
+        <div class="m2_row">
+        <p>
+          {% for el in row %}
+            {{el}}
+          {% endfor %}
+        </p>
+        </div>
+    {% endfor %}
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+.content, h1 {
+  text-align: -webkit-center;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  width: 150px;
+  height: 20px;
+  text-align: center;
+}
+.cell {
+  border: 2px solid black;
+  background: darkkhaki;
+}
+
+.right {
+  border-right: 2px solid black;
+}
+
+.top {
+  border-top: 2px solid black;
+}
+
+.row {
+  width: 150px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 1em;
+    margin: 10px 20px;
+}
+
+.vector {
+    margin-left: -150px;
+}
+
+/* inserted auto in grid-template-columns = columns in result matrix; */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  width: 70%;
+}
+
+.matrix1 {
+    width: 35%;
+}
+
+div.m1_row {
+    padding: 60px;
+    font-size: 1.5em;
+}
+
+div.m1_row p {
+    letter-spacing: 15px;
+}
+
+div.m2_row {
+    font-size: 1.5em;
+}
+
+div.m2_row p {
+    letter-spacing: 159px;
+}
+
+.matrix2 p {
+    font-size: 1em;
+    letter-spacing: 162px;
+}
+
+.matrix2 {
+    margin-left: 19%;
+}
